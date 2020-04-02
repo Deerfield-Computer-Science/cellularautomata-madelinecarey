@@ -29,7 +29,7 @@ public class WorldController extends GraphicsProgram {
 	
 	public void runWorld(){
 		drawWorld();
-		for(int i=0; i<3;i++){
+		for(int i=0; i<3; i++){
 			theWorld.letTimePass();
 			pause(500);
 			drawWorld();

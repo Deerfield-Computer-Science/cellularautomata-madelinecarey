@@ -1,0 +1,33 @@
+1. In what class does the program execution start.� How many "years"� (iterations) pass in this world?� How can you change the amount of time that elapses?
+The program is started from WorldController which then accesses all of the other classes connected. There are three years (or iterations) in this world, to change this edit the �for loop� in runWorld().
+
+2. Describe the flow of execution of the program, where does it start?� Where does it go next? where does it end?
+The program starts in the WorldController class with setUpWorld() which then calls the World class to make the world and add creatures. The world class then calls the grass class to make new grass. The organisms are controlled by the LifeForm class which helps to set all of the basic life functions. The location class allows the controller to set the correct location for the organisms. 
+LifeForm --> plant --> grass
+WorldController accesses everything
+Location and world are two classes to set location and worlds
+
+3. �How would you change the color of the grass?
+Add in a myColor Color to the grass class
+
+4. Describe how grass reproduces.
+If the creature is alive it has to reproduce so every year it each grass adds another
+
+5. How could you make sure the grass does not reproduce a new grass plant on top of an existing grass?
+Because you know the location of existing grass you could store that information and ensure that there is only one grass plant in each location
+
+6. How are the creatures stored and manipulated?
+The creatures are each stored in the creatureList and manipulated through this list with the information stored
+
+7. What is the point of the method purgeTheDead()?
+To make it so that when an organism dies, it is removed from everywhere so that it is not counted multiple times.
+
+8. Do the creatures have a location, or do locations have a creature?
+Creatures have a location because you can find out where a creature is but you cannot find out if there is a creature on a certain location.
+
+9. Does the world have creatures or do the creatures have a world?� Why is this necessary?
+The world has creatures because you can add creatures to a world but not a world to creatures. This is important because it tells the user how to manage creatures and worlds.
+
+10. How would you make a creature move?� Describe what methods you would add and where you would put them?
+You would have to change the set location of the creature. To change this you could use the methods in the location class in the WorldController class.
+
