@@ -26,7 +26,7 @@ To make it so that when an organism dies, it is removed from everywhere so that 
 Creatures have a location because you can find out where a creature is but you cannot find out if there is a creature on a certain location.
 
 9. Does the world have creatures or do the creatures have a world?� Why is this necessary?
-The world has creatures because you can add creatures to a world but not a world to creatures. This is important because it tells the user how to manage creatures and worlds.
+The creature has a world because of the LifeForm class
 
 10. How would you make a creature move?� Describe what methods you would add and where you would put them?
 You would have to change the set location of the creature. To change this you could use the methods in the location class in the WorldController class.

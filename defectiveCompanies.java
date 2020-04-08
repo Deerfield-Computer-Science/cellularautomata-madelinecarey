@@ -1,7 +1,8 @@
+package cellularAutomata;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public abstract class LifeForm {
+public abstract class defectiveCompanies {
 	
 	protected World myWorld;
 	protected int myLifeSpan;
@@ -11,7 +12,7 @@ public abstract class LifeForm {
 	protected boolean alive;
 	
 	// lifeform constructors
-	public LifeForm(int myLifeSpan, Location myLocation, Color myColor, World myWorld) {
+	public defectiveCompanies(int myLifeSpan, Location myLocation, Color myColor, World myWorld) {
 		super();
 		this.myLifeSpan = myLifeSpan;
 		this.myLocation = myLocation;
@@ -20,7 +21,7 @@ public abstract class LifeForm {
 		alive = true;
 	}
 	
-	public LifeForm(Location myLocation, World myWorld) {
+	public defectiveCompanies(Location myLocation, World myWorld) {
 		super();
 		this.myWorld = myWorld;
 		this.myLocation = myLocation;
@@ -40,7 +41,8 @@ public abstract class LifeForm {
 	}
 	
 	// to be alive you have to be able to reproduce....
-	public abstract void reproduce();
+	public void reproduce() {
+	}
 	
 	public boolean isDead(){
 		return !alive;
@@ -85,3 +87,4 @@ public abstract class LifeForm {
 				+ myLocation + ", myColor=" + myColor + "]";
 	}
 }
+
