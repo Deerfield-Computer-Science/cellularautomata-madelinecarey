@@ -2,7 +2,7 @@ package cellularAutomata;
 import java.awt.Color;
 import java.util.ArrayList;
 
-public abstract class collusiveCompanies {
+public abstract class companies {
 			
 	protected World myWorld;
 	protected int myBudget;
@@ -14,7 +14,7 @@ public abstract class collusiveCompanies {
 	protected String typeOfCompany;
 	
 	// lifeform constructors
-	public defectiveCompanies(int myBudget, Location myLocation, Color myColor, World myWorld, int myInfluence) {
+	public companies(int myBudget, Location myLocation, Color myColor, World myWorld, int myInfluence) {
 		super();
 		this.myBudget = myBudget;
 		this.myLocation = myLocation;
@@ -24,7 +24,7 @@ public abstract class collusiveCompanies {
 		alive = true;
 	}
 	
-	public defectiveCompanies(Location myLocation, World myWorld) {
+	public companies(Location myLocation, World myWorld) {
 		super();
 		this.myWorld = myWorld;
 		this.myLocation = myLocation;
@@ -54,11 +54,11 @@ public abstract class collusiveCompanies {
 	
 	// getter and setters (aka accessors and mutators)
 	public int getMyBudget() {
-		return myLifeSpan;
+		return myBudget;
 	}
 	
 	public void setMyBudget(int myLifeSpan) {
-		this.myLifeSpan = myLifeSpan;
+		this.myBudget = myLifeSpan;
 	}
 	
 	public Location getMyLocation() {
@@ -94,16 +94,16 @@ public abstract class collusiveCompanies {
 	}
 	
 	public String getTypeOfCompany() {
-		return "collusive";
+		return typeOfCompany;
 	}
 	
-	public String setTypeOfCompany() {
+	public void setTypeOfCompany() {
 		this.typeOfCompany = typeOfCompany;
 	}
 	
 	@Override
 	public String toString() {
-		return "LifeForm [myLifeSpan=" + myLifeSpan + ", myLocation="
+		return "LifeForm [myLifeSpan=" + myBudget + ", myLocation="
 				+ myLocation + ", myColor=" + myColor + "]";
 	}
 }

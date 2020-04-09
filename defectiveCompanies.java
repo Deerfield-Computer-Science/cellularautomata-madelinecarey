@@ -5,19 +5,22 @@ import java.util.ArrayList;
 public abstract class defectiveCompanies {
 	
 	protected World myWorld;
-	protected int myLifeSpan;
+	protected int myBudget;
 	protected Location myLocation;
 	protected Color myColor;
 	protected int myAge;
 	protected boolean alive;
+	protected int myInfluence;
+	protected String typeOfCompany;
 	
 	// lifeform constructors
-	public defectiveCompanies(int myLifeSpan, Location myLocation, Color myColor, World myWorld) {
+	public defectiveCompanies(int myBudget, Location myLocation, Color myColor, World myWorld, int myInfluence) {
 		super();
-		this.myLifeSpan = myLifeSpan;
+		this.myBudget = myBudget;
 		this.myLocation = myLocation;
 		this.myColor = myColor;
 		this.myWorld = myWorld;
+		this.myInfluence = myInfluence;
 		alive = true;
 	}
 	
@@ -36,8 +39,9 @@ public abstract class defectiveCompanies {
 	// we all age the same, time clicks forward and we all age one unit of time
 	public void age(int time){
 		myAge+=time;
-		if (myAge>myLifeSpan)
+		if (myBudget<=0) {
 			alive=false;
+		}
 	}
 	
 	// to be alive you have to be able to reproduce....
@@ -49,11 +53,11 @@ public abstract class defectiveCompanies {
 	}
 	
 	// getter and setters (aka accessors and mutators)
-	public int getMyLifeSpan() {
+	public int getMyBudget() {
 		return myLifeSpan;
 	}
 	
-	public void setMyLifeSpan(int myLifeSpan) {
+	public void setMyBudget(int myLifeSpan) {
 		this.myLifeSpan = myLifeSpan;
 	}
 	
@@ -79,6 +83,22 @@ public abstract class defectiveCompanies {
 
 	public void setAge(int age) {
 		this.myAge = age;
+	}
+	
+	public int getMyInfluence() {
+		return myInfluence;
+	}
+	
+	public void setMyInfluence() {
+		this.myInfluence = myInfluence;
+	}
+	
+	public String getTypeOfCompany() {
+		return "defective";
+	}
+	
+	public String setTypeOfCompany() {
+		this.typeOfCompany = typeOfCompany;
 	}
 	
 	@Override
