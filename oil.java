@@ -1,4 +1,3 @@
-package cellularAutomata;
 
 import java.awt.Color;
 

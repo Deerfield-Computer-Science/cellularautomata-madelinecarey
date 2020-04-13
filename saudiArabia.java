@@ -1,4 +1,4 @@
-package cellularAutomata;
+package prisonersDilemma;
 
 public class saudiArabia extends oil {
 	
